@@ -769,3 +769,6 @@ Next: Ctrl+F5, verify Management sections render, confirm duplicate categories a
 ## QA2.13 update - 2026-09-04 00:47
 Invoice discrepancies can now be corrected and audited. Products can be grouped into proposed purchasing-equivalence relationships and sent for review or approved by an authorized reviewer. Import template separates discounts from credits/returns and rebates. Footer copyright/mail link added.
 Next: Ctrl+F5 and visually test reconciliation, product equivalence proposal workflow, Data & Import navigation, template download, and footer link.
+
+## GitHub deployment - 2026-09-04 01:41
+PracticeSpend deployment is configured for a PRIVATE GitHub repository with a restricted public GitHub Pages runtime artifact. Browser-delivered JavaScript remains inspectable by visitors; no real invoices, PHI, secrets, credentials, or production data may be placed in the static deployment.

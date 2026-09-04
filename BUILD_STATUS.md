@@ -204,3 +204,6 @@ Automated tests passed through QA2.13.
 ## QA2.14.1 - 2026-09-04 01:26
 Corrected obsolete QA2.7 regression assertion after the QA2.14 complete-invoiced-product model change. Added restricted-demo notice for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology above the copyright line.
 Full test chain passes.
+
+## QA2.15 / GitHub deployment - 2026-09-04 01:41
+Added restricted GitHub Pages deployment surface, search-engine noindex directives, robots.txt, and private-repository deployment documentation. GitHub repository target: Newsomek/PracticeSpend. Pages artifact intentionally excludes internal documentation, tests, QA reports, continuity files, and other repository-only materials.
