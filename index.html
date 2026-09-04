@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PracticeSpend — independent purchasing intelligence for medical practices.">
+  <title>PracticeSpend</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="site-header">
+      <a href="#overview" class="brand" data-nav="overview" aria-label="PracticeSpend overview">PracticeSpend</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <button type="button" data-nav="overview">Overview</button>
+        <button type="button" data-nav="opportunities">Opportunities</button>
+        <button type="button" data-nav="invoices">Invoices</button>
+        <button type="button" data-nav="products">Products</button>
+        <button type="button" data-nav="vendors">Vendors</button>
+        <button type="button" data-nav="reviews">Reviews</button>
+        <button type="button" data-nav="management">Management</button>
+      </nav>
+      <div class="header-actions">
+        <label class="user-switch" title="Prototype persona; production would use authenticated users"><span>Acting as</span><select id="userSelect" aria-label="Prototype user"></select></label>
+        <button id="modeBadge" class="mode-badge" type="button" data-nav="data">DEMO MODE</button>
+        <button class="button button-dark" type="button" data-nav="data" title="Import, enter, export, save, or reset purchasing data">Data &amp; Import</button>
+      </div>
+    </header>
+
+    <main id="view" tabindex="-1"></main>
+
+    <footer class="site-footer">
+      <div><strong>PracticeSpend</strong><br><span>Independent purchasing intelligence.</span></div>
+      <div class="footer-note"><div><strong>Restricted Demo for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology</strong></div><div><span>Copyright 2026 - </span><a class="copyright-link" href="mailto:Kelly@Newsome.com?subject=PracticeSpend%20Inquiry">Michael Kelly Newsome</a><span> - All Rights Reserved</span></div></div>
+    </footer>
+  </div>
+
+  <dialog id="invoiceDialog" class="modal">
+    <form id="invoiceForm" method="dialog" class="modal-card">
+      <div class="modal-header">
+        <div><div class="eyebrow">MANUAL ENTRY</div><h2>Add invoice</h2></div>
+        <button type="button" class="icon-button" data-close-dialog aria-label="Close">×</button>
+      </div>
+      <div id="invoiceFormBody"></div>
+      <div class="modal-actions">
+        <button type="button" class="button button-ghost" data-close-dialog>Cancel</button>
+        <button type="submit" class="button button-dark">Save invoice</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="detailDialog" class="modal">
+    <div class="modal-card modal-card-wide">
+      <div class="modal-header">
+        <div id="detailTitle"></div>
+        <button type="button" class="icon-button" data-close-detail aria-label="Close">×</button>
+      </div>
+      <div id="detailBody"></div>
+    </div>
+  </dialog>
+
+  <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" hidden multiple>
+</body>
+</html>
