@@ -107,4 +107,17 @@
         },
         true
     );
+
+    const helpGuideButton = document.getElementById("helpGuideBtn");
+
+    if (helpGuideButton) {
+        helpGuideButton.addEventListener("click", () => {
+            window.open(
+                "assets/help.html",
+                "_blank",
+                "noopener,noreferrer"
+            );
+        });
+    }
 })();
+
