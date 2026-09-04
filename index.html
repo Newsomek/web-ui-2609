@@ -15,18 +15,18 @@
     <header class="site-header">
       <a href="#overview" class="brand" data-nav="overview" aria-label="PracticeSpend overview">PracticeSpend</a>
       <nav class="primary-nav" aria-label="Primary">
-        <button type="button" data-nav="overview">Overview</button>
-        <button type="button" data-nav="opportunities">Opportunities</button>
-        <button type="button" data-nav="invoices">Invoices</button>
-        <button type="button" data-nav="products">Products</button>
-        <button type="button" data-nav="vendors">Vendors</button>
-        <button type="button" data-nav="reviews">Reviews</button>
-        <button type="button" data-nav="management">Management</button>
+        <button type="button" data-nav="overview" data-nav-help="See the practice's purchasing picture at a glance, including spend, opportunities, major changes, vendors, and categories that may deserve attention.">Overview</button>
+        <button type="button" data-nav="opportunities" data-nav-help="Review findings that may reduce costs or warrant investigation, including price changes, vendor differences, contract issues, duplicates, and other anomalies.">Opportunities</button>
+        <button type="button" data-nav="invoices" data-nav-help="Review the invoices behind PracticeSpend's analysis, inspect line items and provenance, reconcile discrepancies, and manage duplicate or suppressed invoices.">Invoices</button>
+        <button type="button" data-nav="products" data-nav-help="See every invoiced product, compare pricing and purchase history, manage categories, and identify or propose possible purchasing equivalents.">Products</button>
+        <button type="button" data-nav="vendors" data-nav-help="Compare vendor spend, pricing, fees, products, and findings to understand where vendor relationships may deserve attention.">Vendors</button>
+        <button type="button" data-nav="reviews" data-nav-help="Work through items that require human judgment, assign reviews, record decisions, and revisit previous approvals or rejections with a complete history.">Reviews</button>
+        <button type="button" data-nav="management" data-nav-help="Manage practice-controlled reference data, product categories, review sources, and other settings used throughout PracticeSpend.">Management</button>
       </nav>
       <div class="header-actions">
         <label class="user-switch" title="Prototype persona; production would use authenticated users"><span>Acting as</span><select id="userSelect" aria-label="Prototype user"></select></label>
         <button id="modeBadge" class="mode-badge" type="button" data-nav="data">DEMO MODE</button>
-        <button class="button button-dark" type="button" data-nav="data" title="Import, enter, export, save, or reset purchasing data">Data &amp; Import</button>
+        <button class="button button-dark" type="button" data-nav="data" data-nav-help="Bring purchasing data into PracticeSpend, enter invoices manually, download import templates, export or restore data, and manage the local demo dataset.">Data &amp; Import</button>
       </div>
     </header>
 
@@ -63,6 +63,9 @@
   </dialog>
 
   <input id="fileInput" type="file" accept=".csv,.xlsx,.xls" hidden multiple>
+    <script src="js/nav-tooltips.js"></script>
 </body>
 </html>
+
+
 
