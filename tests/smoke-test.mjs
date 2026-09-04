@@ -83,7 +83,7 @@ console.log('QA2.14 invoiced-product/equivalence smoke guards passed.');
 
 // QA2.14.1 restricted-demo footer guard.
 const indexSource2141 = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
-for (const marker of ['Restricted Demo for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology','mailto:Kelly@Newsome.com?subject=PracticeSpend%20Inquiry']) {
+for (const marker of ['Restricted Demo for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology, PLLC','mailto:Kelly@Newsome.com?subject=PracticeSpend%20Inquiry']) {
   if (!indexSource2141.includes(marker)) throw new Error(`QA2.14.1 footer marker missing: ${marker}`);
 }
 console.log('QA2.14.1 restricted-demo footer guard passed.');
@@ -95,7 +95,7 @@ console.log('QA2.14.1 restricted-demo footer guard passed.');
   if (!indexText.includes('noindex,nofollow,noarchive,nosnippet,noimageindex')) {
     throw new Error('QA2.15 missing noindex deployment directive.');
   }
-  if (!indexText.includes('Restricted Demo for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology')) {
+  if (!indexText.includes('Restricted Demo for Dr. James C. Collyer and Dr. Heather D. Rogers of Modern Dermatology, PLLC')) {
     throw new Error('QA2.15 missing restricted-demo identification.');
   }
   const robots = fs.readFileSync(new URL('../robots.txt', import.meta.url), 'utf8');
@@ -108,3 +108,4 @@ console.log('QA2.14.1 restricted-demo footer guard passed.');
   }
   console.log('QA2.15 deployment-hardening smoke guards passed.');
 }
+
