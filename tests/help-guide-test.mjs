@@ -55,6 +55,35 @@ requireMarker(
 
 requireMarker(
   help,
+  "<h2>Acting As</h2>",
+  "Acting As section"
+);
+
+requireMarker(
+  help,
+  "different demonstration users",
+  "Acting As persona explanation"
+);
+
+requireMarker(
+  help,
+  "permissions and actions",
+  "Acting As permission explanation"
+);
+
+requireMarker(
+  help,
+  "production authentication or security",
+  "Acting As demo-only clarification"
+);
+
+requireMarker(
+  help,
+  "Check who you are Acting As.",
+  "Acting As tour step"
+);
+requireMarker(
+  help,
   "A five-minute tour",
   "five-minute tour"
 );
@@ -96,3 +125,4 @@ requireMarker(
 );
 
 console.log("PracticeSpend compact help-guide guards passed.");
+
