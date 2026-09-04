@@ -1,0 +1,15 @@
+PRACTICESPEND
+
+Copyright (c) 2026 Michael Kelly Newsome.
+All Rights Reserved.
+
+PROPRIETARY SOFTWARE
+
+This repository is not open-source software.
+
+Access to, viewing of, or technical ability to copy this repository does
+not grant permission to commercially use, redistribute, sublicense, adapt,
+or create derivative commercial products from PracticeSpend except as
+expressly authorized in writing by Michael Kelly Newsome.
+
+See LICENSE.md for additional terms.
